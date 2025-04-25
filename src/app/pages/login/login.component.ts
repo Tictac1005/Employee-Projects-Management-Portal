@@ -1,6 +1,7 @@
 import { Component, inject } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { Router, RouterModule } from '@angular/router';
+import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-login',
@@ -8,24 +9,28 @@ import { Router, RouterModule } from '@angular/router';
   templateUrl: './login.component.html',
   styleUrl: './login.component.css'
 })
-export class LoginComponent {
-loginObj:any = {
-  username: '',
-  password: ''
-}
 
+export class LoginComponent 
+{
+  loginObj:any =
+  {
+    username: "",
+    password: ""
+  };
+
+http =  inject(HttpClient);
 router = inject(Router);
 
-onLogin()
-{
-  if(this.loginObj.username == 'admin123' && this.loginObj.password == 'admin123')
-  {
-    this.router.navigateByUrl('dashboard');
-  }
-  else
-  {
-    alert("Invalid Credentials");
-  }
+onLogin() {
+  debugger;
+  this.http.post("https://projectapi.gerasim.in/api/EmployeeManagement/login", this.loginObj)
+    .subscribe((res: any) => {
+      if (res.result) {
+        localStorage.setItem('employeeApp', JSON.stringify(res.data));
+        this.router.navigateByUrl('dashboard');
+      } else {
+        alert(res.message);
+      }
+    });
 }
-
 }

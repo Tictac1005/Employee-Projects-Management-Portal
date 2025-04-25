@@ -1,26 +1,23 @@
-<div class="container mt-4">
-    <h2 class="text-center mb-4">Welcome to the Employee Projects Portal</h2>
-  
-    <div class="row">
-      <div class="col-md-6">
-        <div class="card border-info">
-          <div class="card-body text-center">
-            <h5 class="card-title">Manage Employees</h5>
-            <p class="card-text">View and manage employee details efficiently.</p>
-            <a routerLink="/employee" class="btn btn-info">Go to Employees</a>
-          </div>
-        </div>
-      </div>
-  
-      <div class="col-md-6">
-        <div class="card border-info">
-          <div class="card-body text-center">
-            <h5 class="card-title">Track Projects</h5>
-            <p class="card-text">Monitor project progress and employee contributions.</p>
-            <a routerLink="/projects" class="btn btn-info">Go to Projects</a>
-          </div>
-        </div>
-      </div>
+<div class="dashboard-container">
+  <h2 class="dashboard-title">Welcome to the Employee Projects Portal</h2>
+
+  <div class="card-grid">
+    <div class="card">
+      <h3>Manage Employees</h3>
+      <p>View, add, update, or remove employees from the system.</p>
+      <a href="/employee">Go to Employees</a>
+    </div>
+
+    <div class="card">
+      <h3>Track Projects</h3>
+      <p>Assign projects, monitor progress, and manage deliverables.</p>
+      <a href="/projects">Go to Projects</a>
+    </div>
+
+    <div class="card">
+      <h3>Settings</h3>
+      <p>Adjust system preferences and configure user roles.</p>
+      <a href="/settings">Go to Settings</a>
     </div>
   </div>
-  
+</div>

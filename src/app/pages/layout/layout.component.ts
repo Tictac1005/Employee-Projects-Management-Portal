@@ -16,4 +16,12 @@ logout()
 {
   this.router.navigateByUrl('login');
 }
+
+dropdownOpen = false;
+
+toggleDropdown(event: Event) {
+  event.preventDefault(); // Prevents href navigation
+  this.dropdownOpen = !this.dropdownOpen;
+}
+
 }

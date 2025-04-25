@@ -1,34 +1,24 @@
-<div class="parent">
-<div class="container">
-    <div class="row">
-      <!-- Left Blank Side -->
-      <div class="col-lg-6"></div>
-  
-      <!-- Right Side Form -->
-      <div class="col-lg-6 d-flex align-items-center justify-content-center right-side">
-        <div class="form-2-wrapper">
-          <div class="logo text-center">
-            <h2>Login</h2>
-          </div>
-          <h2 class="text-center mb-4">Sign Into Your Account</h2>
-          <form action="#">
-            <div class="mb-3 form-box">
-              <input type="username" class="form-control" id="username" [(ngModel)]="loginObj.username" name="username" placeholder="Enter Your Username" required>
-            </div>
-            <div class="mb-3">
-              <input type="password" class="form-control" id="password" [(ngModel)]="loginObj.password" name="password" placeholder="Enter Your Password" required>
-            </div>
-            <div class="mb-3">
-  
-            </div>
-            <button type="button" (click)="onLogin()" class="btn btn-outline-secondary login-btn w-100 mb-3">Login</button>
-            <div class="social-login mb-3 type--A">
-            </div>
-          </form>
-  
-    </div>
-  </div>
-</div>
-</div>
-</div>
 
+    <main class="main-login">
+        <div class="left-login">
+            <h1>Login<br>And join our team</h1>
+            <img src="https://i.postimg.cc/YC13sX2Z/Astronaut-cuate.png" class="left-login-img" alt="astronaut image">
+        </div>
+
+        <div class="right-login">
+            <div class="card-login">
+                <h1>Login</h1>
+                <div class="textfield">
+                    <label for="user">User</label>
+                    <input type="text" [(ngModel)]="loginObj.username" name="user" placeholder="User">
+                </div>
+
+                <div class="textfield">
+                    <label for="password">Password</label>
+                    <input type="password" [(ngModel)]="loginObj.password"name="password" placeholder="Password">
+                </div>
+
+                <button class="btn-login"(click)="onLogin()">Login</button>
+            </div>
+        </div>
+    </main>
